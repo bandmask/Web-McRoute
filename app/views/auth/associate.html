@@ -1,0 +1,17 @@
+﻿<div>
+    <div ng-hide="failure">
+        <div class="row">
+            <span>Associate your {{externalAuthData.provider}} account with your email</span>
+        </div>
+        <div class="row">
+            <span>User Name: {{externalAuthData.userName}}</span>
+        </div>
+        <div class="row">
+            <input class="col-lg-offset-2 col-lg-6 form-control" ng-model="userEmail" placeholder="Enter Email" />
+            <a class="btn btn-primary" ng-click="sendExternalRegistration()">Submit</a>
+        </div>
+    </div>
+    <div ng-show="failure">
+        <span>{{failure}}</span>
+    </div>
+</div>

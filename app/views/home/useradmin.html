@@ -1,0 +1,28 @@
+﻿<div>
+    <div class="row">
+        <toast></toast>
+    </div>
+    <div class="row">
+        <div class="col col-lg-12 page-headline">
+            <span class="page-headline-text">Administer Profile</span><i class="fa fa-pencil" ng-click="edit = !edit"></i>
+        </div>
+    </div>
+    <div class="row" ng-hide="edit">
+        <div class="col col-lg-12">
+            <div><img class="profile-picture-admin" ng-src="{{vm.userProfile.profilePicture.indexOf('http') >-1 && vm.userProfile.profilePicture || '/Content/Images/Users/' + vm.userProfile.profilePicture}}" /></div>
+            <div>{{vm.userProfile.userName}} | <i class="fa" ng-class="(vm.userProfile.gender=='male') ? 'fa-male' : 'fa-female'"></i></div>
+            <div>{{vm.userProfile.currentCity}}</div>
+        </div>
+    </div>
+    <div class="row" ng-show="edit">
+        <div class="col col-lg-12">
+            <div>
+                <img class="profile-picture-admin" ng-src="{{vm.userProfile.profilePicture.indexOf('http') >-1 && vm.userProfile.profilePicture || '/Content/Images/Users/' + vm.userProfile.profilePicture}}" />
+                <button class="btn btn-block btn-default" ng-click="upload">Change</button>
+            </div>
+            <div><input ng-model="vm.userProfile.userName"/></div>
+            <div><input ng-model="vm.userProfile.currentCity" /></div>
+            <div><button ng-click="vm.save()">Save</button></div>
+        </div>
+    </div>
+</div>

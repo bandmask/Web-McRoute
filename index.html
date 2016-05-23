@@ -1,0 +1,55 @@
+<html>
+<head>
+	<!-- Vendor styles -->
+	<link rel="stylesheet" href="dist/assets/vendor/css/normalize.min.css" />
+	<link rel="stylesheet" href="dist/assets/vendor/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="dist/assets/vendor/css/ngToast.min.css" />
+	<link rel="stylesheet" href="dist/assets/vendor/css/loading-bar.min.css" />
+	<link rel="stylesheet" href="dist/assets/vendor/css/font-awesome.min.css" />
+	<!-- Custom styles -->
+	<link rel="stylesheet" href="dist/assets/css/main.min.css" />
+</head>
+<body ng-app="mcrutt">
+	<div class="navbar navbar-inverse navbar-fixed-top main-nav" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span ui-view="startbutton"></span>
+            </div>
+            <div ui-view="navbar"></div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="row" id="content">
+            <div ui-view></div>
+        </div>
+        <div class="row" id="footer">
+            <hr />
+            <p class="text-left">&copy; mcrutt.se - {{'' | currentyear }}</p>
+        </div>
+    </div>
+
+	<!-- Vendor scripts -->
+	<script type="text/javascript" src="dist/assets/vendor/js/jquery.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/lodash.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-simple-logger.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-google-maps.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-local-storage.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/loading-bar.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-animate.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/angular-resource.min.js"></script>
+	<script type="text/javascript" src="dist/assets/vendor/js/ngToast.min.js"></script>
+	<!-- Custom scripts -->
+	<script type="text/javascript" src="dist/assets/js/app.js"></script>
+	<script type="text/javascript" src="dist/assets/html/templates.js"></script>
+</body>
+</html>

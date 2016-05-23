@@ -1,0 +1,13 @@
+﻿<div>
+    <div class="row">
+        <div class="col col-lg-12 routeTitle">{{vm.route.title}}</div>
+    </div>
+    <div class="row">
+        <div class="col col-lg-12 routeTextDetails" ng-bind-html="vm.route.text"></div>
+    </div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li><a data-ui-sref="route.map">Map</a></li>
+        <li><a data-ui-sref="route.photos">Photos</a></li>
+    </ul>
+    <div ui-view></div>
+</div>

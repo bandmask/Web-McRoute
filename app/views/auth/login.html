@@ -1,0 +1,16 @@
+﻿<div>
+    <div ng-show="vm.errorMessage">
+        <span>{{vm.errorMessage}}</span>
+    </div>
+    <div class="row">
+        <div class="col col-lg-offset-3 col-lg-6">
+            <h3>Login</h3>
+            <div class="center-block">
+                <a class="text-center provider-logo google-plus-logo" ng-click="vm.authExternal('Google')"></a>
+            </div>
+        </div>
+    </div>
+    <div class="row" ng-show="vm.message">
+        <span>{{vm.message}}</span>
+    </div>
+</div>

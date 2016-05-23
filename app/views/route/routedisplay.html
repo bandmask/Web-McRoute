@@ -1,0 +1,25 @@
+﻿<div class="row routeTitleMain">
+    <div class="col col-lg-12">
+        <a ui-sref="route.map({id: {{route.id}}})"><span class="routeTitle">{{route.title}}</span></a>
+        <span class="routeDate">{{route.created | date:'yyyy-MM-dd HH:mm:ss'}}</span>
+    </div>
+</div>
+<div class="row routeContentWrapper">
+    <div class="col col-lg-6 routeText">
+        <div ng-bind-html="route.escapedText"></div>
+        <div class="gradient">
+        </div>
+    </div>
+    <div class="col col-lg-4 routeMapDisplay" ng-show="map && map.isSet">
+        <ui-gmap-google-map center='map.center' zoom='map.zoom' refresh="map.isSet">
+            <ui-gmap-marker idkey="startMarker.id" coords="startMarker.coords" options="startMarker.options">
+            </ui-gmap-marker>
+            <ui-gmap-marker idkey="endMarker.id" coords="endMarker.coords" options="endMarker.options">
+            </ui-gmap-marker>
+            <ui-gmap-polylines models="polylines" path='"path"' visible="visible" stroke='"stroke"' geodesic='"geodesic"' editable='"editable"' draggable='"draggable"' static="true" fit="true"></ui-gmap-polylines>
+        </ui-gmap-google-map>
+    </div>
+    <div class="col col-lg-2 routePhotos">
+        <img src="../../../../Content/Images/tempPic.jpg" />
+    </div>
+</div>

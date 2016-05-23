@@ -1,0 +1,11 @@
+﻿<div class="row" ng-show="vm.map && vm.map.isSet">
+    <div class="col col-lg-12 routeMapDetails">
+        <ui-gmap-google-map center='vm.map.center' zoom='vm.map.zoom' refresh="vm.map.isSet">
+            <ui-gmap-marker idkey="vm.startMarker.id" coords="vm.startMarker.coords" options="vm.startMarker.options">
+            </ui-gmap-marker>
+            <ui-gmap-marker idkey="vm.endMarker.id" coords="vm.endMarker.coords" options="vm.endMarker.options">
+            </ui-gmap-marker>
+            <ui-gmap-polylines models="vm.polylines" path='"path"' visible="visible" stroke='"stroke"' geodesic='"geodesic"' editable='"editable"' draggable='"draggable"' fit="true" static="true"></ui-gmap-polylines>
+        </ui-gmap-google-map>
+    </div>
+</div>
